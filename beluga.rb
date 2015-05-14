@@ -9,6 +9,5 @@ class Beluga < Formula
 
   def install
     bin.install "bin/beluga" => "beluga"
-    system 'make', 'install', "PREFIX=#{prefix}"
   end
 end
