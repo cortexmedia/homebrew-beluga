@@ -6,6 +6,7 @@ class Beluga < Formula
   url "https://github.com/cortexmedia/Beluga.git", :tag => "0.0.1"
   head "https://github.com/cortexmedia/Beluga.git"
 
+  depends_on "docker-compose" => :recommended
   depends_on "docker" => :recommended
   depends_on "boot2docker" => :recommended
 
