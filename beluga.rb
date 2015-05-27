@@ -11,6 +11,7 @@ class Beluga < Formula
   depends_on "boot2docker" => :recommended
 
   def install
+    prefix.install Dir["lib/*", "samples/*", "img/*", "scripts/*"]
     bin.install "bin/beluga" => "beluga"
   end
 end
