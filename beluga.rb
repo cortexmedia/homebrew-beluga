@@ -3,7 +3,7 @@ require 'formula'
 class Beluga < Formula
   homepage 'https://github.com/cortexmedia/Beluga'
   # Use the tag instead of the tarball to get submodules
-  url "https://github.com/cortexmedia/Beluga.git", :tag => "0.2"
+  url "https://github.com/cortexmedia/Beluga.git", :tag => "0.2.1"
   head "https://github.com/cortexmedia/Beluga.git"
 
   depends_on "docker-compose" => :recommended
@@ -11,7 +11,10 @@ class Beluga < Formula
   depends_on "boot2docker" => :recommended
 
   def install
-    prefix.install Dir["lib/*", "samples/*", "img/*", "scripts/*"]
+    prefix.install "lib"
+    prefix.install "samples"
+    prefix.install "img"
+    prefix.install "scripts"
     bin.install "bin/beluga" => "beluga"
   end
 end
